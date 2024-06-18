@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^123.0.1",
     "next": "14.2.4",
     "playwright": "^1.44.1",
+    "playwright-core": "1.44.1",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -20,6 +22,7 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "nextjs-node-loader": "^1.1.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
