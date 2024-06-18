@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium && next build",
     "start": "next start",
     "lint": "next lint"
   },
