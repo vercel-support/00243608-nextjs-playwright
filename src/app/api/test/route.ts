@@ -1,5 +1,7 @@
-import { NextResponse } from "next/server";
-import { chromium } from "playwright";
+import { NextResponse } from 'next/server';
+import { chromium } from 'playwright';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const browser = await chromium.launch();
@@ -8,9 +10,8 @@ export async function GET() {
 
   await page.goto('https://vercel.com/');
 
-
   const title = await page.title();
-  
+
   // Teardown
   await context.close();
   await browser.close();
